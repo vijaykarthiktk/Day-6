@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Creative Website - HTML Basics</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HTML + CSS Beginner Practice Guide</title>
   <style>
     * {
       margin: 0;
@@ -13,8 +14,8 @@
     }
 
     body {
-      background-color: #fff;
-      color: #222;
+      background-color: #f8f8f8;
+      color: #333;
       line-height: 1.6;
     }
 
@@ -25,115 +26,329 @@
     }
 
     header {
-      background-color: #f2f2f2;
-      padding: 1.5rem 0;
-      border-bottom: 1px solid #ccc;
+      background-color: #4CAF50;
+      color: white;
+      padding: 2rem 0;
+      text-align: center;
     }
 
     header h1 {
-      display: inline-block;
-      font-size: 1.8rem;
-      color: #333;
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      font-size: 1rem;
+      opacity: 0.9;
     }
 
     nav {
-      float: right;
+      background-color: #333;
+      text-align: center;
+      padding: 1rem 0;
     }
 
     nav a {
-      margin-left: 1.5rem;
+      color: white;
       text-decoration: none;
-      color: #333;
+      margin: 0 1rem;
       font-weight: bold;
+      transition: color 0.3s;
     }
 
     nav a:hover {
-      color: #000;
+      color: #4CAF50;
     }
 
-    .hero {
-      padding: 4rem 0;
-      text-align: center;
+    .section-title {
+      border-left: 4px solid #4CAF50;
+      padding-left: 1rem;
+      margin: 2rem 0 1rem;
+      display: flex;
+      align-items: center;
     }
 
-    .hero h2 {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-    }
-
-    .hero p {
-      font-size: 1.2rem;
-      margin-bottom: 2rem;
-    }
-
-    .btn {
-      text-decoration: none;
-      background-color: #222;
-      color: #fff;
-      padding: 0.8rem 1.5rem;
-      border-radius: 5px;
-      transition: background-color 0.3s;
-    }
-
-    .btn:hover {
-      background-color: #444;
+    .section-title span {
+      margin-right: 0.5rem;
     }
 
     .html-basics {
-      padding: 3rem 0;
-      background-color: #fafafa;
-    }
-
-    .html-basics h2 {
-      text-align: center;
+      padding: 2rem 0;
+      background-color: white;
       margin-bottom: 1rem;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     }
 
-    .html-basics ul {
-      list-style: disc;
-      padding-left: 2rem;
-      margin-top: 1rem;
-    }
-
-    .html-basics li {
+    .tag-box {
+      background-color: #f9f9f9;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      padding: 1rem;
       margin-bottom: 0.5rem;
+    }
+
+    .tag-name {
+      font-weight: bold;
+      color: #333;
+    }
+
+    .tag-description {
+      color: #666;
+      font-size: 0.9rem;
+    }
+
+    .css-basics {
+      padding: 2rem 0;
+      background-color: white;
+      margin-bottom: 1rem;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .property-box {
+      background-color: #f9f9f9;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      padding: 1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .property-name {
+      font-weight: bold;
+      color: #333;
+    }
+
+    .property-description {
+      color: #666;
+      font-size: 0.9rem;
+    }
+
+    .practice-examples {
+      padding: 2rem 0;
+      background-color: white;
+      margin-bottom: 1rem;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .example-box-1 {
+      background-color: #e8f5e9;
+      border: 1px solid #c8e6c9;
+      padding: 20px;
+      margin: 10px;
+      border-radius: 5px;
+    }
+
+    .example-box-2 {
+      background-color: #ffebee;
+      border: 1px solid #ffcdd2;
+      padding: 0;
+      margin: 30px;
+      border-radius: 5px;
+    }
+
+    .flex-container {
+      display: flex;
+      justify-content: space-between;
+      margin: 1rem 0;
+    }
+
+    .flex-item {
+      background-color: #e3f2fd;
+      padding: 1rem;
+      border-radius: 4px;
+      text-align: center;
+      flex: 1;
+      margin: 0 0.5rem;
+    }
+
+    .flex-item:nth-child(2) {
+      background-color: #a5d6a7;
+    }
+
+    .styled-text {
+      text-align: center;
+      padding: 1rem;
+      border: 1px dashed #666;
+      margin: 1rem 0;
+    }
+
+    .alert-box {
+      background-color: #fff9c4;
+      padding: 1rem;
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 1rem 0;
+      margin-top: 2rem;
     }
   </style>
 </head>
+
 <body>
   <header>
     <div class="container">
-      <h1>CreativeSite</h1>
-      <nav>
-        <a href="#">Home</a>
-        <a href="#">Work</a>
-        <a href="#">About</a>
-        <a href="#">Contact</a>
-      </nav>
+      <h1>HTML + CSS Beginner Practice Guide</h1>
+      <p>Understand basic HTML tags and CSS properties</p>
     </div>
   </header>
 
-
-  <section class="html-basics">
+  <nav>
     <div class="container">
-      <h2>HTML Basics</h2>
-      <p>HTML (HyperText Markup Language) is the standard markup language used to create web pages. It structures the content and tells the browser how to display text, images, and other elements.</p>
-
-      <h3>Essential Elements</h3>
-      <ul>
-        <li><strong>&lt;!DOCTYPE html&gt;</strong> – Defines the document type.</li>
-        <li><strong>&lt;html&gt;</strong> – The root of the HTML document.</li>
-        <li><strong>&lt;head&gt;</strong> – Contains metadata like title, charset, etc.</li>
-        <li><strong>&lt;body&gt;</strong> – Contains the visible page content.</li>
-        <li><strong>&lt;h1&gt; to &lt;h6&gt;</strong> – Header tags, from largest (h1) to smallest (h6).</li>
-        <li><strong>&lt;p&gt;</strong> – Paragraph element.</li>
-        <li><strong>&lt;a&gt;</strong> – Anchor tag for hyperlinks.</li>
-        <li><strong>&lt;img&gt;</strong> – Image element.</li>
-        <li><strong>&lt;div&gt;</strong> and <strong>&lt;span&gt;</strong> – For layout and inline grouping.</li>
-      </ul>
-
-      <p>Learning HTML is the first step to becoming a web developer. It's easy to get started and fun to build with!</p>
+      <a href="#html">HTML</a>
+      <a href="#css">CSS</a>
+      <a href="#practice">Practice</a>
     </div>
-  </section>
+  </nav>
+
+  <div class="container">
+    <section id="html" class="html-basics">
+      <h2 class="section-title"><span>📄</span> HTML Basics</h2>
+
+      <div class="tag-box">
+        <div class="tag-name">&lt;html&gt;</div>
+        <div class="tag-description">— Root element that wraps entire HTML document.</div>
+      </div>
+
+      <div class="tag-box">
+        <div class="tag-name">&lt;head&gt;</div>
+        <div class="tag-description">— Contains metadata like title, links to CSS, charset.</div>
+      </div>
+
+      <div class="tag-box">
+        <div class="tag-name">&lt;body&gt;</div>
+        <div class="tag-description">— Visible part of HTML page.</div>
+      </div>
+
+      <div class="tag-box">
+        <div class="tag-name">&lt;h1&gt; to &lt;h6&gt;</div>
+        <div class="tag-description">— Headings, h1 is largest.</div>
+      </div>
+
+      <div class="tag-box">
+        <div class="tag-name">&lt;p&gt;</div>
+        <div class="tag-description">— Paragraph text.</div>
+      </div>
+
+      <div class="tag-box">
+        <div class="tag-name">&lt;div&gt;</div>
+        <div class="tag-description">— Generic container block.</div>
+      </div>
+
+      <div class="tag-box">
+        <div class="tag-name">&lt;span&gt;</div>
+        <div class="tag-description">— Inline container.</div>
+      </div>
+
+      <div class="tag-box">
+        <div class="tag-name">&lt;a href=""&gt;</div>
+        <div class="tag-description">— Hyperlink.</div>
+      </div>
+
+      <div class="tag-box">
+        <div class="tag-name">&lt;ul&gt;, &lt;ol&gt;, &lt;li&gt;</div>
+        <div class="tag-description">— Unordered, ordered lists and items.</div>
+      </div>
+
+      <div class="tag-box">
+        <div class="tag-name">&lt;table&gt;</div>
+        <div class="tag-description">— Table structure with &lt;tr&gt;, &lt;th&gt;, &lt;td&gt;</div>
+      </div>
+    </section>
+
+    <section id="css" class="css-basics">
+      <h2 class="section-title"><span>🎨</span> CSS Basics</h2>
+
+      <div class="property-box">
+        <div class="property-name">color:</div>
+        <div class="property-description">Changes text color.</div>
+      </div>
+
+      <div class="property-box">
+        <div class="property-name">background-color:</div>
+        <div class="property-description">Sets background.</div>
+      </div>
+
+      <div class="property-box">
+        <div class="property-name">padding:</div>
+        <div class="property-description">Space inside the element.</div>
+      </div>
+
+      <div class="property-box">
+        <div class="property-name">margin:</div>
+        <div class="property-description">Space outside the element.</div>
+      </div>
+
+      <div class="property-box">
+        <div class="property-name">border:</div>
+        <div class="property-description">Adds outline around the element.</div>
+      </div>
+
+      <div class="property-box">
+        <div class="property-name">font-size:</div>
+        <div class="property-description">Controls text size</div>
+      </div>
+
+      <div class="property-box">
+        <div class="property-name">text-align:</div>
+        <div class="property-description">Aligns text.</div>
+      </div>
+
+      <div class="property-box">
+        <div class="property-name">display:</div>
+        <div class="property-description">Controls layout (block, inline, flex).</div>
+      </div>
+
+      <div class="property-box">
+        <div class="property-name">flexbox:</div>
+        <div class="property-description">Layout system for flexible items.</div>
+      </div>
+
+      <div class="property-box">
+        <div class="property-name">box-shadow:</div>
+        <div class="property-description">Adds shadow around elements.</div>
+      </div>
+    </section>
+
+    <section id="practice" class="practice-examples">
+      <h2 class="section-title"><span>❤️</span> Practice Examples</h2>
+
+      <p>Try modifying padding and margin values and observe changes.</p>
+
+      <div class="example-box-1">
+        Box 1: Padding: 20px | Margin: 10px
+      </div>
+
+      <div class="example-box-2">
+        Box 2: Padding: 0 | Margin: 30px
+      </div>
+
+      <div class="flex-container">
+        <div class="flex-item">Flex Item 1</div>
+        <div class="flex-item">Flex Item 2</div>
+      </div>
+
+      <div class="styled-text">
+        Centered and styled text!
+      </div>
+
+      <div class="alert-box">
+        Rounded corner alert box
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    <div class="container">
+      Made with ❤️ for Beginners | Practice Makes Perfect!
+    </div>
+  </footer>
 </body>
+
 </html>
