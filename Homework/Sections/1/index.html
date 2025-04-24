@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .container {
+      display: flex;
+      gap: 40px;
+    }
+
+    .box {
+      width: 150px;
+      height: 150px;
+      background-color: lightblue;
+      text-align: center;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .with-padding {
+      padding: 20px;
+      background-color: lightgreen;
+    }
+
+    .with-margin {
+      margin: 20px;
+      background-color: lightsalmon;
+    }
+
+    .label {
+      font-weight: bold;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    body {
+      font-family: sans-serif;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<h2>📦 Padding vs Margin</h2>
+
+<div class="container">
+  <div>
+    <div class="label">Padding</div>
+    <div class="box with-padding">Inside spacing (padding)<br>pushes content inward</div>
+  </div>
+
+  <div>
+    <div class="label">Margin</div>
+    <div class="box with-margin">Outside spacing (margin)<br>pushes elements away</div>
+  </div>
+</div>
+
+</body>
+</html>
