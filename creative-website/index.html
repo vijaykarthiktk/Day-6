@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Creative Website - HTML Basics</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background-color: #fff;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    header {
+      background-color: #f2f2f2;
+      padding: 1.5rem 0;
+      border-bottom: 1px solid #ccc;
+    }
+
+    header h1 {
+      display: inline-block;
+      font-size: 1.8rem;
+      color: #333;
+    }
+
+    nav {
+      float: right;
+    }
+
+    nav a {
+      margin-left: 1.5rem;
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #000;
+    }
+
+    .hero {
+      padding: 4rem 0;
+      text-align: center;
+    }
+
+    .hero h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+    }
+
+    .btn {
+      text-decoration: none;
+      background-color: #222;
+      color: #fff;
+      padding: 0.8rem 1.5rem;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #444;
+    }
+
+    .html-basics {
+      padding: 3rem 0;
+      background-color: #fafafa;
+    }
+
+    .html-basics h2 {
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    .html-basics ul {
+      list-style: disc;
+      padding-left: 2rem;
+      margin-top: 1rem;
+    }
+
+    .html-basics li {
+      margin-bottom: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>CreativeSite</h1>
+      <nav>
+        <a href="#">Home</a>
+        <a href="#">Work</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+
+  <section class="html-basics">
+    <div class="container">
+      <h2>HTML Basics</h2>
+      <p>HTML (HyperText Markup Language) is the standard markup language used to create web pages. It structures the content and tells the browser how to display text, images, and other elements.</p>
+
+      <h3>Essential Elements</h3>
+      <ul>
+        <li><strong>&lt;!DOCTYPE html&gt;</strong> – Defines the document type.</li>
+        <li><strong>&lt;html&gt;</strong> – The root of the HTML document.</li>
+        <li><strong>&lt;head&gt;</strong> – Contains metadata like title, charset, etc.</li>
+        <li><strong>&lt;body&gt;</strong> – Contains the visible page content.</li>
+        <li><strong>&lt;h1&gt; to &lt;h6&gt;</strong> – Header tags, from largest (h1) to smallest (h6).</li>
+        <li><strong>&lt;p&gt;</strong> – Paragraph element.</li>
+        <li><strong>&lt;a&gt;</strong> – Anchor tag for hyperlinks.</li>
+        <li><strong>&lt;img&gt;</strong> – Image element.</li>
+        <li><strong>&lt;div&gt;</strong> and <strong>&lt;span&gt;</strong> – For layout and inline grouping.</li>
+      </ul>
+
+      <p>Learning HTML is the first step to becoming a web developer. It's easy to get started and fun to build with!</p>
+    </div>
+  </section>
+</body>
+</html>
